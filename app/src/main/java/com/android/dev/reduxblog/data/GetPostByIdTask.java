@@ -3,7 +3,6 @@ package com.android.dev.reduxblog.data;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.android.dev.reduxblog.AppBase;
 import com.android.dev.reduxblog.data.remote.PostInterceptor;
 import com.android.dev.reduxblog.data.remote.ReduxBlogApi;
 import com.android.dev.reduxblog.model.Post;
@@ -17,7 +16,6 @@ public class GetPostByIdTask extends AsyncTask<Integer, Void, Post> {
 
         Post post = new Post();
         final ReduxBlogApi request = PostInterceptor.get();
-
         Call<Post> call = request.getPostById(integers[0]);
 
         try {

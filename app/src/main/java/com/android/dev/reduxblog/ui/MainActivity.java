@@ -80,10 +80,8 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
 
     public class GetAllPost extends GetAllPostTask {
 
@@ -111,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
             SwipeToDeleteCallback swipeToDeleteCallback = new SwipeToDeleteCallback(getApplicationContext()) {
                 @Override
                 public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-
                     final int position = viewHolder.getAdapterPosition();
                     mAdapter.removePost(position);
                     Post post = posts.get(position);

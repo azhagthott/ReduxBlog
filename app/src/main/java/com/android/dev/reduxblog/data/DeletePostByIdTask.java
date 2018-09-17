@@ -17,6 +17,7 @@ public class DeletePostByIdTask extends AsyncTask<Integer, Void, Boolean> {
         final ReduxBlogApi request = PostInterceptor.get();
         Call<Post> call = request.deletePost(integers[0]);
         boolean status = false;
+
         try {
             Response<Post> response = call.execute();
             if (response.code() == 200) {

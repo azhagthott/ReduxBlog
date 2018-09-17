@@ -28,6 +28,7 @@ public class CreateNewPostTask extends AsyncTask<Post, Void, Post> {
         Call<Post> call = request.createPost(AppBase.API_KEY, jsonObject);
 
         Post post = new Post();
+
         try {
             Response<Post> response = call.execute();
             if (response.code() == 200) {

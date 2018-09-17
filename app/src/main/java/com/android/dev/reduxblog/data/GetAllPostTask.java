@@ -21,7 +21,6 @@ public class GetAllPostTask extends AsyncTask<Void, Integer, List<Post>> {
 
         List<Post> mPostList = new ArrayList<>();
         final ReduxBlogApi request = PostInterceptor.get();
-
         Call<List<Post>> call = request.getAllPosts(AppBase.API_KEY);
 
         try {
